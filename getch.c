@@ -68,22 +68,22 @@ main(void)
 #include <Python.h>
 
 static PyObject *
-PyGetch_getch(PyObject *self, PyObject *args) 
+Getch_getch(PyObject *self, PyObject *args) 
 {
     char c = getch();
     return Py_BuildValue("c", c);
 }
 
 static PyObject *
-PyGetch_getche(PyObject *self, PyObject *args) 
+Getch_getche(PyObject *self, PyObject *args) 
 {
     char c = getche();
     return Py_BuildValue("c", c);
 }
 
 static PyMethodDef GetchMethods[] = {
-    { "getch", PyGetch_getch, METH_NOARGS, "getch" },
-    { "getche", PyGetch_getche, METH_NOARGS, "getche" },
+    { "getch", Getch_getch, METH_NOARGS, "getch" },
+    { "getche", Getch_getche, METH_NOARGS, "getche" },
     { NULL, NULL, 0, NULL }
 };
 
