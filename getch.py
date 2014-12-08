@@ -9,4 +9,4 @@ def getch():
     return _getch.getch().decode()
 
 def getche():
-    return str(_getch.getche().decode())
+    return _getch.getche().decode()
